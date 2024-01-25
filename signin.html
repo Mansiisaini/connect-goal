@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pexels-damir-mijailovic-3695238.jpg');
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signin-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:lightblue;
+        }
+        .register-link {
+            margin-top: 10px;
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+        }
+        .register-link:hover{
+            color:blue;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"  placeholder="Enter your email"required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="button" onclick="validateSignIn()">Sign In</button>
+        </form>
+
+        <a href="login.html" class="register-link">Already have an account? Login here.</a>
+        <br>
+       
+    </div>
+
+    <script>
+        function validateSignIn() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Add your authentication logic here (e.g., check against a database)
+            // For demonstration purposes, let's assume a simple username/password check
+            if (email === "example" && password === "password") {
+                alert("signIn successful!");
+            } else {
+                alert("Invalid email or password. Try again.");
+            }
+        
+        }
+    </script>
+</body>
+</html>
